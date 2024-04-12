@@ -1,0 +1,13 @@
+@startuml command 1
+
+== Sending COMMAND ==
+PC -> MCU: Sending packet COMMAND MMV_CHECK_STATUS  on **Serial Rx Characteristic**
+Activate MCU
+Deactivate MCU
+MCU -> MCU: Process the COMMAND
+== Sending RESPONE == 
+MCU -> PC: Sending packet RESPONE MMV_RESP_STATUS on **Serial TX Characteristic**
+Activate PC
+Deactivate PC
+
+@enduml
